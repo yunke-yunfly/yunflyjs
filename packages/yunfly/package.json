@@ -1,6 +1,6 @@
 {
   "name": "@yunflyjs/yunfly",
-  "version": "0.0.1-beta.2",
+  "version": "0.0.1-beta.3",
   "main": "build/index.js",
   "typings": "build/index.d.ts",
   "keywords": [
@@ -24,10 +24,10 @@
     "build"
   ],
   "dependencies": {
-    "@yunflyjs/loggers": "0.0.1-beta.2",
-    "@yunflyjs/yunfly-bin": "0.0.1-beta.2",
-    "@yunflyjs/yunfly-core": "0.0.1-beta.2",
-    "@yunflyjs/yunfly-plugin-body-parser": "0.0.1-beta.2",
-    "@yunflyjs/yunfly-plugin-error": "0.0.1-beta.2"
+    "@yunflyjs/loggers": "0.0.1-beta.3",
+    "@yunflyjs/yunfly-bin": "0.0.1-beta.3",
+    "@yunflyjs/yunfly-core": "0.0.1-beta.3",
+    "@yunflyjs/yunfly-plugin-body-parser": "0.0.1-beta.3",
+    "@yunflyjs/yunfly-plugin-error": "0.0.1-beta.3"
   }
 }
