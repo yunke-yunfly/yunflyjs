@@ -18,7 +18,8 @@
     "dev": "tsc --watch"
   },
   "publishConfig": {
-    "access": "restricted"
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
   },
   "engines": {
     "node": ">=12.17.0"

@@ -24,10 +24,6 @@
     "version:major": "echo '发布主版本'  && cross-env HUSKY_SKIP_HOOKS=1 lerna version major --exact --force-publish --yes",
     "publish-all": "lerna publish from-git --yes"
   },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org"
-  },
   "husky": {
     "hooks": {
       "pre-commit": "yarn setPushFollowTags && yarn spell-check:all",

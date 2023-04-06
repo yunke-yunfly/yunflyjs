@@ -11,6 +11,10 @@
   "files": [
     "build"
   ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
   "dependencies": {
     "cfork": "^1.8.0",
     "chalk": "^4.1.0",

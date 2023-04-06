@@ -8,7 +8,8 @@
     "dev": "tsc --watch"
   },
   "publishConfig": {
-    "access": "restricted"
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
   },
   "engines": {
     "node": ">=10.13.0"
@@ -16,5 +17,5 @@
   "files": [
     "dist"
   ],
-  "license": "Apache"
+  "license": "MIT"
 }
