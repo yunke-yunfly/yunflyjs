@@ -1,0 +1,28 @@
+{
+  "name": "@yunflyjs/yunfly-cluster",
+  "version": "0.0.1-beta.2",
+  "main": "build/index.js",
+  "typings": "build/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "build": "gts clean && tsc",
+    "dev": "tsc --watch"
+  },
+  "files": [
+    "build"
+  ],
+  "dependencies": {
+    "cfork": "^1.8.0",
+    "chalk": "^4.1.0",
+    "cluster-reload": "^1.0.2",
+    "dayjs": "^1.10.4",
+    "debug": "^4.3.1",
+    "detect-port": "^1.3.0",
+    "pid-from-port": "^1.1.3",
+    "sendmessage": "^1.1.0",
+    "tree-kill": "^1.2.2"
+  },
+  "devDependencies": {
+    "@yunflyjs/loggers": "0.0.1-beta.2"
+  }
+}

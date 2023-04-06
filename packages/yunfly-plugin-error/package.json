@@ -1,0 +1,23 @@
+{
+  "name": "@yunflyjs/yunfly-plugin-error",
+  "version": "0.0.1-beta.2",
+  "main": "./dist/app.js",
+  "typings": "dist/app.d.ts",
+  "scripts": {
+    "build": "gts clean && tsc",
+    "dev": "tsc --watch"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "engines": {
+    "node": ">=10.13.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "license": "Apache",
+  "devDependencies": {
+    "@yunflyjs/yunfly-core": "0.0.1-beta.2"
+  }
+}

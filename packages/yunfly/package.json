@@ -1,0 +1,33 @@
+{
+  "name": "@yunflyjs/yunfly",
+  "version": "0.0.1-beta.2",
+  "main": "build/index.js",
+  "typings": "build/index.d.ts",
+  "keywords": [
+    "yunfly"
+  ],
+  "framework": "yunfly",
+  "description": "yunfly最小单元, Node.js WEB框架",
+  "license": "MIT",
+  "scripts": {
+    "build": "gts clean && tsc",
+    "dev": "tsc --watch"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "engines": {
+    "node": ">=12.17.0"
+  },
+  "files": [
+    "bin",
+    "build"
+  ],
+  "dependencies": {
+    "@yunflyjs/loggers": "0.0.1-beta.2",
+    "@yunflyjs/yunfly-bin": "0.0.1-beta.2",
+    "@yunflyjs/yunfly-core": "0.0.1-beta.2",
+    "@yunflyjs/yunfly-plugin-body-parser": "0.0.1-beta.2",
+    "@yunflyjs/yunfly-plugin-error": "0.0.1-beta.2"
+  }
+}
