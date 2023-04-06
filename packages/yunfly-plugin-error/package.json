@@ -1,6 +1,6 @@
 {
   "name": "@yunflyjs/yunfly-plugin-error",
-  "version": "0.0.1-beta.3",
+  "version": "0.0.1-beta.4",
   "main": "./dist/app.js",
   "typings": "dist/app.d.ts",
   "scripts": {
@@ -18,6 +18,6 @@
   ],
   "license": "Apache",
   "devDependencies": {
-    "@yunflyjs/yunfly-core": "0.0.1-beta.3"
+    "@yunflyjs/yunfly-core": "0.0.1-beta.4"
   }
 }

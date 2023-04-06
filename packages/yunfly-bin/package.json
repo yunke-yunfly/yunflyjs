@@ -1,6 +1,6 @@
 {
   "name": "@yunflyjs/yunfly-bin",
-  "version": "0.0.1-beta.3",
+  "version": "0.0.1-beta.4",
   "main": "build/index.js",
   "typings": "build/index.d.ts",
   "keywords": [
@@ -32,7 +32,7 @@
     "commander": "^9.0.0"
   },
   "devDependencies": {
-    "@yunflyjs/loggers": "0.0.1-beta.3",
-    "@yunflyjs/yunfly-core": "0.0.1-beta.3"
+    "@yunflyjs/loggers": "0.0.1-beta.4",
+    "@yunflyjs/yunfly-core": "0.0.1-beta.4"
   }
 }
