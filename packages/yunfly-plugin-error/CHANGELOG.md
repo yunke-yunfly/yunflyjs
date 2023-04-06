@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.0.1-beta.5](https://github.com/yunke-yunfly/yunflyjs/compare/v0.0.1-beta.4...v0.0.1-beta.5) (2023-04-06)
+
+
+### Features
+
+* license ([359234a](https://github.com/yunke-yunfly/yunflyjs/commit/359234a4e7a0637dc0204faa30f0f7c8450e5c42))
+
+
+
 ### [0.0.1-beta.4](https://github.com/yunke-yunfly/yunflyjs/compare/v0.0.1-beta.3...v0.0.1-beta.4) (2023-04-06)
 
 **Note:** Version bump only for package @yunflyjs/yunfly-plugin-error
