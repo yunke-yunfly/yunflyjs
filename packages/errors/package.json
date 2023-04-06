@@ -8,8 +8,7 @@
     "dev": "tsc --watch"
   },
   "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/yunflyjs"
+    "access": "public"
   },
   "engines": {
     "node": ">=10.13.0"
