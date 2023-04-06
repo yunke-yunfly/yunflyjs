@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.0.1-beta.6](https://github.com/yunke-yunfly/yunflyjs/compare/v0.0.1-beta.5...v0.0.1-beta.6) (2023-04-06)
+
+
+### Features
+
+* 使用npm镜像 ([5764507](https://github.com/yunke-yunfly/yunflyjs/commit/576450770d0dab6c2fe655ff6016b5658f2222f7))
+
+
+
 ### [0.0.1-beta.5](https://github.com/yunke-yunfly/yunflyjs/compare/v0.0.1-beta.4...v0.0.1-beta.5) (2023-04-06)
 
 

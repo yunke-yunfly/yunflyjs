@@ -1,6 +1,6 @@
 {
   "name": "@yunflyjs/yunfly-plugin-body-parser",
-  "version": "0.0.1-beta.5",
+  "version": "0.0.1-beta.6",
   "main": "./dist/app.js",
   "typings": "dist/app.d.ts",
   "scripts": {
@@ -22,6 +22,6 @@
     "koa-bodyparser": "^4.3.0"
   },
   "devDependencies": {
-    "@yunflyjs/yunfly-core": "0.0.1-beta.5"
+    "@yunflyjs/yunfly-core": "0.0.1-beta.6"
   }
 }
