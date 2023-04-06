@@ -18,6 +18,7 @@ jobs:
           registry-url: https://registry.npmmirror.com/
       - run: yarn --frozen-lockfile --registry=https://registry.npmmirror.com/
       - run: yarn build
+      - run: git status
       - run: yarn publish-all --pre-dist-tag=beta
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
