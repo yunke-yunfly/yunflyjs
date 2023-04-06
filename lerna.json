@@ -79,7 +79,7 @@
         "ignored-file",
         "*.md"
       ],
-      "registry": "https://registry.npmmirror.com",
+      "registry": "https://registry.npmjs.org",
       "message": "chore: publish"
     }
   }
