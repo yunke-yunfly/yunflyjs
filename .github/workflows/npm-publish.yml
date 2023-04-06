@@ -16,7 +16,9 @@ jobs:
         with:
           node-version: 14
           registry-url: https://registry.npmmirror.com/
+      - run: git status
       - run: yarn --frozen-lockfile --registry=https://registry.npmmirror.com/
+      - run: git status
       - run: yarn build
       - run: git status
       - run: yarn publish-all --pre-dist-tag=beta
