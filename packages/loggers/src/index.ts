@@ -3,5 +3,5 @@ export {
   debug,
   setLogFilter,
   setArgsHandle,
-  setEnableLog4js,
+  setEnableLogger,
 } from './logger';

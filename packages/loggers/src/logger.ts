@@ -4,7 +4,7 @@ const util = require('util');
 const randomColor = require('randomcolor');
 const chalk = require('chalk');
 
-const consoleLog = isProd ? (process.env.CONSOLE_OUTPUT === 'true' ? true : false) : true;
+const consoleLog = isProd ? (process.env.YUNFLY_CONSOLE_OUTPUT === 'true' ? true : false) : true;
 console.access = console.log;
 console.log1 = console.log;
 
@@ -22,7 +22,7 @@ const logger = getDefaultLogger(packageJson.name);
 
 let logFilter: any;
 let argumentsHandle: ArgsHandleType;
-let enablelog4js: boolean = true;
+let enablelogger: boolean = true;
 
 export function setLogFilter(opt: TLogFilter): void {
   if (opt) { logFilter = opt; }
@@ -32,8 +32,8 @@ export function setArgsHandle(opt: ArgsHandleType) {
   if (opt) argumentsHandle = opt;
 }
 
-export function setEnableLog4js(opt: boolean) {
-  enablelog4js = opt;
+export function setEnableLogger(opt: boolean) {
+  enablelogger = opt;
 }
 
 class Logger {
@@ -117,7 +117,7 @@ class Logger {
     }
 
     const loggerfn = (args: any[]) => {
-      if (process.env.DISABLE_LOG4JS || !enablelog4js) { return; }
+      if (process.env.YUNFLY_DISABLE_LOGGER || !enablelogger) { return; }
       if (key === 'access') { this.accessLogger.info(args); }
       else if (key === 'error') { this.errorLogger.error(args); }
       else { this.businessLogger.info(args); }
@@ -193,7 +193,7 @@ const replaceOrigin = (
   const origin = (console as any)[key];
   (console as any)[key] = function () {
     let argumentsRes = [...arguments];
-    if (process.env.DISABLE_LOG4JS || !enablelog4js) {
+    if (process.env.YUNFLY_DISABLE_LOGGER || !enablelogger) {
       origin.call(this, ...argumentsRes);
       return;
     }

@@ -40,6 +40,17 @@ logger.prefix('yunfly').info('hello %d', 'world!');
 logger.window().error('some error!');
 ```
 
+### console 代理
+
+框架代理了 console 方法，因此 console 打印的日志也会输出到文件中。
+
+```ts
+console.log('1111');
+console.info('hello %d', 'world!');
+console.error('some error!');
+console.access('access log');
+```
+
 ## 方法说明
 
 ### color
@@ -201,7 +212,34 @@ setArgsHandle(handle)
 logger.info('自定义日志处理逻辑！');
 ```
 
+- 可通过 `setEnableLogger` 设置是否输出日志文件
+
+```ts
+import logger, { setEnableLogger } from '@yunflyjs/loggers';
+
+setEnableLogger(false);
+
+logger.info('当前日志只会在控制台中输出！');
+```
+
 ## 其他知识
+
+### process.env.YUNFLY_LOGGER_DIR
+
+自定义日志目录(可选)
+
+```ts
+// 通过 YUNFLY_LOGGER_DIR 环境变量自定义日志输出目录
+process.env.YUNFLY_LOGGER_DIR = require('path').join(__dirname,'logs') 
+```
+
+### process.env.YUNFLY_CONSOLE_OUTPUT
+
+控制台是否输出日志。
+
+### process.env.YUNFLY_DISABLE_LOGGER
+
+日志是否输出到文件中。
 
 ### process.env.YUNFLY_DEBUG
 

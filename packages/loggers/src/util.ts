@@ -42,9 +42,6 @@ const yunflyFormat = winston.format.printf(({ level, message, timestamp }: any) 
   if (typeof _.get(datas, 'trace.id') === 'string') {
     messages = datas.data || [];
     output['trace.id'] = datas['trace.id'];
-    // 基于性能考虑，暂不打印transaction.id与sapn.id
-    // output['transaction.id'] = datas['transaction.id'];
-    // output['sapn.id'] = datas['sapn.id'];
     if (datas['stack']) {
       output['stack'] = datas['stack'];
     }
@@ -67,10 +64,22 @@ const yunflyFormat = winston.format.printf(({ level, message, timestamp }: any) 
 });
 
 export function getDefaultLogger(name: string) {
-  const dirname = process.cwd();
-  const businessFilename = !isProd ? path.join(dirname, 'log/business.log') : `/var/log/service/business/${name}/out.log`;
-  const accessFilename = !isProd ? path.join(dirname, 'log/access.log') : `/var/log/service/access/${name}/out.log`;
-  const errorFilename = !isProd ? path.join(dirname, 'log/error.log') : `/var/log/service/err/${name}/error.log`;
+  let businessFilename: string;
+  let accessFilename: string;
+  let errorFilename: string;
+
+  const yunflyLoggerDir = process.env.YUNFLY_LOGGER_DIR || '';
+
+  if (yunflyLoggerDir) {
+    businessFilename = path.join(yunflyLoggerDir, 'log/business.log');
+    accessFilename = path.join(yunflyLoggerDir, 'log/access.log');
+    errorFilename = path.join(yunflyLoggerDir, 'log/error.log');
+  } else {
+    const dirname = process.cwd();
+    businessFilename = !isProd ? path.join(dirname, 'log/business.log') : `/var/log/service/business/${name}/out.log`;
+    accessFilename = !isProd ? path.join(dirname, 'log/access.log') : `/var/log/service/access/${name}/out.log`;
+    errorFilename = !isProd ? path.join(dirname, 'log/error.log') : `/var/log/service/err/${name}/error.log`;
+  }
 
   const getLogger = ({ level, filename }: any) => winston.createLogger({
     level,
