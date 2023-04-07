@@ -1,15 +1,20 @@
-# yunfly
+# Yunfly
 
-Yunfly 一款高性能 Node.js WEB 框架, 使用 Typescript 构建我们的应用。 使用 Koa2 做为 HTTP 底层框架, 使用 routing-controllers 、 typedi 来高效构建我们的 Node 应用
+Yunfly. A high-performance Node.js web framework.
 
-## 与社区框架差异
+Building our application using `Typescript`.
 
-<https://yunke-yunfly.github.io/doc.github.io/docs/introduction/framework-differences>
+Using `Koa2` as the HTTP underlying framework. Using `routing-controllers` and `typedi` to efficiently build our Node application.
 
-## 性能
+## Technology
 
-<https://yunke-yunfly.github.io/doc.github.io/docs/introduction/performance>
+- Koa2: node.js HTTP framework.
+- find-my-way: Crazy fast http radix based router.
+- Typescript: TypeScript is a language for application scale JavaScript development.
+- routing-controllers: Create structured, declarative and beautifully organized class-based controllers with heavy decorators usage for Express / Koa using TypeScript.
+- typedi: Dependency injection for TypeScript.
+- winston: A logger for just about everything.
 
-## 文档地址
+## Document Address
 
 <https://yunke-yunfly.github.io/doc.github.io/>
