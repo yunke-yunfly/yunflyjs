@@ -1,0 +1,39 @@
+{
+  "name": "@yunflyjs/yunfly-bin",
+  "version": "0.0.1-beta.8",
+  "main": "build/index.js",
+  "typings": "build/index.d.ts",
+  "keywords": [
+    "yunfly",
+    "yunfly bin"
+  ],
+  "description": "BFF框架,引擎",
+  "license": "MIT",
+  "bin": {
+    "yunfly-bin": "./bin/index.js",
+    "yunfly": "./bin/index.js"
+  },
+  "scripts": {
+    "build": "gts clean && tsc",
+    "dev": "tsc --watch"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "engines": {
+    "node": ">=12.17.0"
+  },
+  "files": [
+    "bin",
+    "build"
+  ],
+  "dependencies": {
+    "@yunflyjs/ts-node-dev": "2.0.0",
+    "commander": "^9.0.0"
+  },
+  "devDependencies": {
+    "@yunflyjs/loggers": "0.0.1-beta.8",
+    "@yunflyjs/yunfly-core": "0.0.1-beta.8"
+  }
+}

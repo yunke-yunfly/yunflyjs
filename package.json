@@ -1,0 +1,53 @@
+{
+  "name": "yunflyjs",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "description": "a monorepo project by lerna",
+  "scripts": {
+    "tips": "请先看 README.md",
+    "test": "dotenv lerna run test",
+    "build": "dotenv lerna run build",
+    "dev": "dotenv lerna run dev --parallel",
+    "inspect": "dotenv lerna run inspect",
+    "lint:all": "dotenv lerna run lint:all",
+    "test:watch": "lerna run test:watch",
+    "test:coverage": "lerna run test:coverage",
+    "ci": "lerna run ci",
+    "spell-check:all": "dotenv lerna run spell-check:all",
+    "prettier": "dotenv lerna run prettier",
+    "setPushFollowTags": "echo '本地项目设置git push代码时自动push tag' && git config push.followtags true",
+    "version:pre": "echo '发布预发布beta版本' && cross-env HUSKY_SKIP_HOOKS=1 lerna version prerelease --preid beta --exact --force-publish --yes",
+    "version:patch": "echo '发布补丁版本'  && cross-env HUSKY_SKIP_HOOKS=1 lerna version patch --exact --force-publish --yes",
+    "version:minor": "echo '发布小版本' && cross-env HUSKY_SKIP_HOOKS=1 lerna version minor --exact --force-publish --yes",
+    "version:major": "echo '发布主版本'  && cross-env HUSKY_SKIP_HOOKS=1 lerna version major --exact --force-publish --yes",
+    "publish-all": "lerna publish from-git --yes"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn setPushFollowTags && yarn spell-check:all",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "12.1.4",
+    "@commitlint/config-angular": "12.1.4",
+    "@commitlint/config-conventional": "12.1.4",
+    "@commitlint/config-lerna-scopes": "12.1.4",
+    "@types/cross-spawn": "^6.0.0",
+    "@types/fs-extra": "^5.0.4",
+    "@types/jest": "^26.0.24",
+    "@types/lodash": "^4.14.116",
+    "@types/node": "^14.14.37",
+    "@umijs/test": "^3.5.4",
+    "cross-env": "^7.0.3",
+    "dotenv-cli": "^5.0.0",
+    "gts": "^3.1.0",
+    "husky": "4.3.8",
+    "koa": "^2.13.1",
+    "lerna": "^4.0.0",
+    "lint-staged": "10.5.4",
+    "typescript": "4.6"
+  }
+}

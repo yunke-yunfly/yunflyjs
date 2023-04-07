@@ -1,0 +1,24 @@
+{
+  "name": "@yunflyjs/yunfly-plugin-error",
+  "version": "0.0.1-beta.8",
+  "main": "./dist/app.js",
+  "typings": "dist/app.d.ts",
+  "scripts": {
+    "build": "gts clean && tsc",
+    "dev": "tsc --watch"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "engines": {
+    "node": ">=10.13.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "license": "Apache",
+  "devDependencies": {
+    "@yunflyjs/yunfly-core": "0.0.1-beta.8"
+  }
+}
