@@ -22,7 +22,7 @@
     "version:patch": "echo '发布补丁版本'  && cross-env HUSKY_SKIP_HOOKS=1 lerna version patch --exact --force-publish --yes",
     "version:minor": "echo '发布小版本' && cross-env HUSKY_SKIP_HOOKS=1 lerna version minor --exact --force-publish --yes",
     "version:major": "echo '发布主版本'  && cross-env HUSKY_SKIP_HOOKS=1 lerna version major --exact --force-publish --yes",
-    "publish-all": "lerna publish from-git --yes"
+    "publish-all": "lerna publish from-git --no-git-reset --yes"
   },
   "husky": {
     "hooks": {
