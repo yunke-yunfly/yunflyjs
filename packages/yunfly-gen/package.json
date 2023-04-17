@@ -1,0 +1,31 @@
+{
+  "name": "@yunflyjs/yunfly-gen",
+  "version": "0.0.1-beta.8",
+  "main": "./dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "gts clean && tsc",
+    "dev": "tsc --watch"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "engines": {
+    "node": ">=10.13.0"
+  },
+  "bin": {
+    "yunfly-gen": "./dist/index.js"
+  },
+  "files": [
+    "bin",
+    "dist"
+  ],
+  "license": "Apache",
+  "dependencies": {
+    "commander": "9.0.0",
+    "inquirer": "8.0.0",
+    "fs-extra": "^10.0.0",
+    "chalk": "^4.1.0"
+  }
+}

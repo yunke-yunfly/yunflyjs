@@ -29,8 +29,9 @@
     "build"
   ],
   "dependencies": {
+    "@yunflyjs/yunfly-gen": "0.0.1-beta.8",
     "@yunflyjs/ts-node-dev": "2.0.0",
-    "commander": "^9.0.0"
+    "commander": "9.0.0"
   },
   "devDependencies": {
     "@yunflyjs/loggers": "0.0.1-beta.8",
