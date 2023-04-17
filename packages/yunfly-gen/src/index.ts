@@ -1,6 +1,8 @@
-const path = require('path');
+import * as path from 'path'
+import genCode from './main'
+
 const inquirer = require('inquirer');
-const genCode = require('./dist/index.js').default;
+const spawn = require('cross-spawn');
 
 inquirer
   .prompt([
@@ -13,10 +15,17 @@ inquirer
       },
     },
   ])
-  .then((answers: { appName: string }) => {
+  .then(async (answers: { appName: string }) => {
+    const outputDir = path.join(process.cwd(), `./${answers.appName}`);
     const opton = {
       name: answers.appName,
-      outputDir: path.join(process.cwd(), `./${answers.appName}`)
+      outputDir,
     }
     genCode(opton);
+    // 安装依赖
+    spawn('cd ', [outputDir], { stdio: 'inherit' });
+    const child = spawn('yarn ', ['install'], { stdio: 'inherit' });
+    child.on('data', (data: string) => {
+      console.log(data);
+    });
   });

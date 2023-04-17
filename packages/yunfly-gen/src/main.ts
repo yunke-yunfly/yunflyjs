@@ -6,7 +6,7 @@ import genTsconfig from './gen-tsconfig.json';
 import genMiddleware from './gen-middleware';
 import { Option } from './type'
 
-export default function getCode(option: Option) {
+export default function genCode(option: Option) {
   genPackageJson(option);
   genTsconfig(option);
   genGitignore(option);
