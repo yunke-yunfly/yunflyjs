@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### 0.0.1-beta.10 (2023-04-17)
+
+
+### Features
+
+* init project ([c94d437](https://github.com/yunke-yunfly/yunflyjs/commit/c94d4372b6dacb189df8747e0879115d0629ca7c))
+
+
+
 ### 0.0.1-beta.9 (2023-04-17)
 
 
