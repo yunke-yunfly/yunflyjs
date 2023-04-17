@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### 0.0.1-beta.9 (2023-04-17)
+
+
+### Features
+
+* add yunfly scaffold ([1d3efe0](https://github.com/yunke-yunfly/yunflyjs/commit/1d3efe0d80c1fc811b6635d601cdd3ee29453c72))
+* init project ([c94d437](https://github.com/yunke-yunfly/yunflyjs/commit/c94d4372b6dacb189df8747e0879115d0629ca7c))
+
+
+
 ### [0.0.1-beta.8](https://github.com/yunke-yunfly/yunflyjs/compare/v0.0.1-beta.7...v0.0.1-beta.8) (2023-04-06)
 
 **Note:** Version bump only for package @yunflyjs/yunfly-bin

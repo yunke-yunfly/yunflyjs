@@ -1,6 +1,6 @@
 {
   "name": "@yunflyjs/yunfly-gen",
-  "version": "0.0.1-beta.8",
+  "version": "0.0.1-beta.9",
   "main": "./dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
@@ -23,9 +23,9 @@
   ],
   "license": "Apache",
   "dependencies": {
+    "chalk": "^4.1.0",
     "commander": "9.0.0",
-    "inquirer": "8.0.0",
     "fs-extra": "^10.0.0",
-    "chalk": "^4.1.0"
+    "inquirer": "8.0.0"
   }
 }
