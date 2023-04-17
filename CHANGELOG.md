@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.0.1-beta.11](https://github.com/yunke-yunfly/yunflyjs/compare/v0.0.1-beta.10...v0.0.1-beta.11) (2023-04-17)
+
+
+### Features
+
+* 新增yunfly脚手架 ([7217367](https://github.com/yunke-yunfly/yunflyjs/commit/7217367cfa38915a40aee7ac8347210bbc9d1d92))
+
+
+
 ### 0.0.1-beta.10 (2023-04-17)
 
 

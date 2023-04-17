@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.0.1-beta.11](https://github.com/yunke-yunfly/yunflyjs/compare/v0.0.1-beta.10...v0.0.1-beta.11) (2023-04-17)
+
+**Note:** Version bump only for package @yunflyjs/yunfly-core
+
+
+
+
+
 ### 0.0.1-beta.10 (2023-04-17)
 
 
