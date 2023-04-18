@@ -7,7 +7,7 @@
     "yunfly",
     "yunfly bin"
   ],
-  "description": "BFF框架,引擎",
+  "description": "A high-performance Node.js web framework.",
   "license": "MIT",
   "bin": {
     "yunfly-bin": "./bin/index.js",

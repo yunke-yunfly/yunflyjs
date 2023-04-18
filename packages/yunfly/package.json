@@ -10,7 +10,7 @@
     "yunfly"
   ],
   "framework": "yunfly",
-  "description": "yunfly最小单元, Node.js WEB框架",
+  "description": "Yunfly. A high-performance Node.js web framework.",
   "license": "MIT",
   "scripts": {
     "build": "gts clean && tsc",

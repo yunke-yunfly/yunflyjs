@@ -9,7 +9,7 @@
     "routing-controllers",
     "typedi"
   ],
-  "description": "BFF框架,引擎",
+  "description": "A high-performance Node.js web framework.",
   "license": "MIT",
   "scripts": {
     "build": "gts clean && tsc",
