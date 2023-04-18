@@ -17,7 +17,7 @@
   "files": [
     "dist"
   ],
-  "license": "Apache",
+  "license": "MIT",
   "dependencies": {
     "koa-bodyparser": "^4.3.0"
   },

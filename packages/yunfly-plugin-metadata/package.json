@@ -14,7 +14,7 @@
   "files": [
     "dist"
   ],
-  "license": "Apache",
+  "license": "MIT",
   "devDependencies": {
     "@yunflyjs/yunfly-core": "0.0.1-beta.12"
   }
