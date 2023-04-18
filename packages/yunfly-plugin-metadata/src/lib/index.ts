@@ -25,8 +25,8 @@ export default class Medata {
    */
   protected setCustomContext(key: string, value: { value: any; type: string }): any {
     const ctx: any = getCurrentContext();
-    if (!_.get(ctx, 'currentTransaction._custom')) {
-      ctx.currentTransaction._custom = {}
+    if (!_.get(ctx, 'currentTransaction')) {
+      ctx.currentTransaction = { _custom: {} };
     };
 
     if (!ctx.currentTransaction._custom[key]) {
@@ -44,10 +44,7 @@ export default class Medata {
     }
 
     if (value.type === 'remove') {
-      const index = ctx.currentTransation._custom[key].indexOf(value.value);
-      if (index > -1) {
-        ctx.currentTransation._custom[key].splice(index, 1);
-      }
+      ctx.currentTransation._custom[key] = [];
       return
     }
   }
