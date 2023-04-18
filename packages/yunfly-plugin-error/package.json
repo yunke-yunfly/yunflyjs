@@ -1,6 +1,6 @@
 {
   "name": "@yunflyjs/yunfly-plugin-error",
-  "version": "0.0.1-beta.13",
+  "version": "0.0.1-beta.14",
   "main": "./dist/app.js",
   "typings": "dist/app.d.ts",
   "scripts": {
@@ -19,6 +19,6 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@yunflyjs/yunfly-core": "0.0.1-beta.13"
+    "@yunflyjs/yunfly-core": "0.0.1-beta.14"
   }
 }

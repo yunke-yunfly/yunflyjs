@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.0.1-beta.14](https://github.com/yunke-yunfly/yunflyjs/compare/v0.0.1-beta.13...v0.0.1-beta.14) (2023-04-18)
+
+
+### Features
+
+* 更新版本 ([9c3b6f2](https://github.com/yunke-yunfly/yunflyjs/commit/9c3b6f2d1f1758533fb5b8998701a04efd2d1c87))
+* 修复 metadata 插件 ([d9e3737](https://github.com/yunke-yunfly/yunflyjs/commit/d9e373781245b3d98ff817a4c353fb5a09fa51d7))
+* 修复 metadata 插件 ([3eb8868](https://github.com/yunke-yunfly/yunflyjs/commit/3eb8868fc929d01a81574b933bbe08de4e31bfc9))
+
+
+
 ### [0.0.1-beta.13](https://github.com/yunke-yunfly/yunflyjs/compare/v0.0.1-beta.11...v0.0.1-beta.13) (2023-04-18)
 
 
