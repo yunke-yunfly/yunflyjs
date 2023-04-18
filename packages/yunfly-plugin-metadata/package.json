@@ -1,5 +1,5 @@
 {
-  "name": "@yunflyjs/yunfly-plugin-error",
+  "name": "@yunflyjs/yunfly-plugin-metadata",
   "version": "0.0.1-beta.12",
   "main": "./dist/app.js",
   "typings": "dist/app.d.ts",
@@ -10,9 +10,6 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
-  },
-  "engines": {
-    "node": ">=10.13.0"
   },
   "files": [
     "dist"

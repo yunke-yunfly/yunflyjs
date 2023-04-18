@@ -1,5 +1,4 @@
 module.exports = {
-  extends: ['@yunke/eslint-config-ts'],
   rules: {
     '@typescript-eslint/naming-convention': 0,
     '@typescript-eslint/ban-types': 0,
