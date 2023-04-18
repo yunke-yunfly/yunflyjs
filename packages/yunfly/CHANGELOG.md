@@ -8,6 +8,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
+* 增加 metadata 插件 ([f53a429](https://github.com/yunke-yunfly/yunflyjs/commit/f53a429aab2ccf1322be80a5be8701a923f91e4c))
+
+
+
+### [0.0.1-beta.12](https://github.com/yunke-yunfly/yunflyjs/compare/v0.0.1-beta.11...v0.0.1-beta.12) (2023-04-18)
+
+
+### Features
+
 * add metadata plugin ([40a224a](https://github.com/yunke-yunfly/yunflyjs/commit/40a224adb2781bab1cf048f5002f727be800de12))
 
 
