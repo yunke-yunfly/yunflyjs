@@ -1,6 +1,6 @@
 {
   "name": "@yunflyjs/yunfly-plugin-metadata",
-  "version": "0.0.1-beta.11",
+  "version": "0.0.1-beta.12",
   "main": "./dist/app.js",
   "typings": "dist/app.d.ts",
   "scripts": {
@@ -15,6 +15,6 @@
   ],
   "license": "Apache",
   "devDependencies": {
-    "@yunflyjs/yunfly-core": "0.0.1-beta.11"
+    "@yunflyjs/yunfly-core": "0.0.1-beta.12"
   }
 }

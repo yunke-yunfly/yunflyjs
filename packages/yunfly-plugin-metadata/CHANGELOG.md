@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.0.1-beta.12](https://github.com/yunke-yunfly/yunflyjs/compare/v0.0.1-beta.11...v0.0.1-beta.12) (2023-04-18)
+
+
+### Features
+
+* add metadata plugin ([40a224a](https://github.com/yunke-yunfly/yunflyjs/commit/40a224adb2781bab1cf048f5002f727be800de12))
+
+
+
+
 ### [6.1.8](https://git.myscrm.cn/yued/yunfly-plugin-apm-console-trace/compare/v6.1.7...v6.1.8) (2023-03-03)
 
 **Note:** Version bump only for package @yunke/yunfly-plugin-metadata
