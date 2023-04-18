@@ -30,7 +30,6 @@
   ],
   "dependencies": {
     "@yunflyjs/ts-node-dev": "2.0.0",
-    "@yunflyjs/yunfly-gen": "0.0.1-beta.12",
     "commander": "9.0.0"
   },
   "devDependencies": {
