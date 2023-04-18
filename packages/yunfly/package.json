@@ -29,6 +29,7 @@
     "@yunflyjs/yunfly-bin": "0.0.1-beta.11",
     "@yunflyjs/yunfly-core": "0.0.1-beta.11",
     "@yunflyjs/yunfly-plugin-body-parser": "0.0.1-beta.11",
-    "@yunflyjs/yunfly-plugin-error": "0.0.1-beta.11"
+    "@yunflyjs/yunfly-plugin-error": "0.0.1-beta.11",
+    "@yunflyjs/yunfly-plugin-metadata": "0.0.1-beta.11"
   }
 }

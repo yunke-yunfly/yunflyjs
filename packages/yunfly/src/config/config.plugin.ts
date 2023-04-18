@@ -6,6 +6,11 @@ import { PluginConfig } from '@yunflyjs/yunfly-core';
 
 const plugins: PluginConfig[] = [
   {
+    name: 'error',
+    package: '@yunflyjs/yunfly-plugin-metadata',
+    priority: 2,
+  },
+  {
     name: 'bodyParser',
     package: '@yunflyjs/yunfly-plugin-body-parser',
     priority: 3,

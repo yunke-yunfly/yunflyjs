@@ -18,6 +18,6 @@ jobs:
           registry-url: https://registry.npmjs.org
       - run: yarn --frozen-lockfile --registry=https://registry.npmmirror.com/
       - run: yarn build
-      - run: yarn publish-all --pre-dist-tag=beta
+      - run: yarn publish-all --pre-dist-tag=latest
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}

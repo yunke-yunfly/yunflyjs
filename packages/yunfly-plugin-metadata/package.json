@@ -1,0 +1,20 @@
+{
+  "name": "@yunflyjs/yunfly-plugin-metadata",
+  "version": "0.0.1-beta.11",
+  "main": "./dist/app.js",
+  "typings": "dist/app.d.ts",
+  "scripts": {
+    "build": "gts clean && tsc",
+    "dev": "tsc --watch"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "files": [
+    "dist"
+  ],
+  "license": "Apache",
+  "devDependencies": {
+    "@yunflyjs/yunfly-core": "0.0.1-beta.11"
+  }
+}
