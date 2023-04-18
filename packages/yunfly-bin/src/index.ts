@@ -16,22 +16,14 @@ getFrameworkDir();
 program
   .version(packageJson.version)
   .option('-w, --watch', 'yunfly watch app')
-  .option('-g, --gen', 'gen yunfly template')
   .parse(process.argv);
 
 const options = program.opts();
 
-if (options.gen) {
-  // 运行脚手架
-  require('@yunflyjs/yunfly-gen');
+if (isDev()) {
+  // developmeng
+  new devRuning().init(options);
 } else {
-  if (isDev()) {
-    // developmeng
-    new devRuning().init(options);
-  } else {
-    // production
-    new prodRuning().init(options);
-  }
+  // production
+  new prodRuning().init(options);
 }
-
-

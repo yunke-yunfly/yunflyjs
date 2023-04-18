@@ -1,5 +1,5 @@
 {
-  "name": "@yunflyjs/yunfly-plugin-body-parser",
+  "name": "@yunflyjs/yunfly-plugin-metadata",
   "version": "0.0.1-beta.12",
   "main": "./dist/app.js",
   "typings": "dist/app.d.ts",
@@ -11,16 +11,10 @@
     "access": "public",
     "registry": "https://registry.npmjs.org"
   },
-  "engines": {
-    "node": ">=10.13.0"
-  },
   "files": [
     "dist"
   ],
   "license": "MIT",
-  "dependencies": {
-    "koa-bodyparser": "^4.3.0"
-  },
   "devDependencies": {
     "@yunflyjs/yunfly-core": "0.0.1-beta.12"
   }

@@ -1,6 +1,6 @@
 {
   "name": "@yunflyjs/loggers",
-  "version": "0.0.1-beta.11",
+  "version": "0.0.1-beta.12",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "keywords": [
@@ -21,7 +21,7 @@
   "files": [
     "dist"
   ],
-  "license": "Apache",
+  "license": "MIT",
   "dependencies": {
     "chalk": "^4.1.0",
     "fast-safe-stringify": "^2.1.1",
