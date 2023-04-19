@@ -31,7 +31,6 @@ export default function config(): Config {
   config.cluster = {
     env: {
       RUNTIME_ENV: process.env.RUNTIME_ENV,
-      YUNKE_ENV: process.env.YUNKE_ENV,
       NODE_ENV: process.env.NODE_ENV,
       CLUSTER: process.env.CLUSTER,
       YUNFLY_WATCH: process.env.YUNFLY_WATCH,

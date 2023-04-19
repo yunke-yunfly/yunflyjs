@@ -7,7 +7,7 @@ const chalk = require('chalk');
 
 
 // BFF运行环境 test | release | prod
-export const YUNKE_ENV = process.env.YUNKE_ENV || 'local';
+export const RUNTIME_ENV = process.env.RUNTIME_ENV || 'local';
 export const NODE_ENV = process.env.NODE_ENV || 'production';
 
 // BFF运行目录

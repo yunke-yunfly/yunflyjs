@@ -1,6 +1,6 @@
 import { PluginConfig } from '../loader/types';
 import { ApolloConfig, Config } from '../type';
-import { YUNKE_ENV, deepMerge } from '../util';
+import { RUNTIME_ENV, deepMerge } from '../util';
 import { getPathFromPlugin } from './utils';
 
 /**
@@ -12,7 +12,7 @@ import { getPathFromPlugin } from './utils';
 export default function getPluginConfig(plugin: PluginConfig, apolloConfig: ApolloConfig): Config {
   const { pluginSrc } = getPathFromPlugin(plugin);
   const defaultConfigPath = `${pluginSrc}/config/config.default`;
-  const envConfigPath = `${pluginSrc}/config/config.${YUNKE_ENV}`;
+  const envConfigPath = `${pluginSrc}/config/config.${RUNTIME_ENV}`;
 
   let config: Config = {};
   let pluginDefaultConfig: any;

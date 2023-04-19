@@ -9,7 +9,7 @@ const deepmerge = require('deepmerge');
 process.env.YUNFLY_VERSION = getYunflyPackageJson().version;
 
 // BFF运行环境 test | release | prod
-export const YUNKE_ENV = (process.env.YUNKE_ENV || 'local').replace(/.*[_-]/, '');
+export const RUNTIME_ENV = (process.env.RUNTIME_ENV || 'local').replace(/.*[_-]/, '');
 export const NODE_ENV = process.env.NODE_ENV || 'production';
 
 // BFF运行目录

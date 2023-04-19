@@ -1,6 +1,6 @@
 import * as path from 'path';
 
-import { ENV_SRC, YUNKE_ENV } from './util';
+import { ENV_SRC, RUNTIME_ENV } from './util';
 
 // package.json 配置
 export const PACKAGE_JSON_CONFIG = path.join(process.cwd(), './package.json').replace(/\\/g, '//');
@@ -12,7 +12,7 @@ export const DEFAULT_DEFAULT_CONFIG = path
 
 //  bff 业务代码中 env config 配置
 export const ENV_CONFIG = path
-  .join(process.cwd(), `${ENV_SRC}/config/config.${YUNKE_ENV}`)
+  .join(process.cwd(), `${ENV_SRC}/config/config.${RUNTIME_ENV}`)
   .replace(/\\/g, '//');
 
 // koa 初始化中间件 config 配置

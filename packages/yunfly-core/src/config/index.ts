@@ -38,7 +38,7 @@ function getConfigs(): { bffDefaultConfig: any; bffEnvConfig: any; framworkConfi
     bffEnvConfig = require(ENV_CONFIG).default;
   } catch (err: any) {
     if (/Cannot find.+config/.test(err.details || err.message)) {
-      // logger.info(`【yunfly config】: 没有配置config.${YUNKE_ENV}.ts配置文件(可忽略配置)`);
+      // logger.info(`【yunfly config】: 没有配置config.${RUNTIME_ENV}.ts配置文件(可忽略配置)`);
     } else {
       throw err;
     }

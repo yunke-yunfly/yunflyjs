@@ -7,7 +7,11 @@
   "author": "zane <752636052@qq.com>",
   "homepage": "https://yunke-yunfly.github.io/doc.github.io/document/introduction/introduce",
   "keywords": [
-    "yunfly"
+    "koa2",
+    "routing-controllers",
+    "find-my-way",
+    "typedi",
+    "typescript"
   ],
   "framework": "yunfly",
   "description": "Yunfly. A high-performance Node.js web framework.",
