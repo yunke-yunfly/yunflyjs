@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.0.1-beta.15](https://github.com/yunke-yunfly/yunflyjs/compare/v0.0.1-beta.14...v0.0.1-beta.15) (2023-04-20)
+
+
+### Features
+
+* 更新框架描述字段 ([0a8d733](https://github.com/yunke-yunfly/yunflyjs/commit/0a8d7331b6a4332c857f97106f847b185266a209))
+* 优化 剔除所有内置插件 只留初始化核心逻辑 ([a2c57aa](https://github.com/yunke-yunfly/yunflyjs/commit/a2c57aa638c2fd38d56b31f3393d81fc5823dc43))
+
+
+
 ### [0.0.1-beta.14](https://github.com/yunke-yunfly/yunflyjs/compare/v0.0.1-beta.13...v0.0.1-beta.14) (2023-04-18)
 
 **Note:** Version bump only for package @yunflyjs/yunfly-bin
