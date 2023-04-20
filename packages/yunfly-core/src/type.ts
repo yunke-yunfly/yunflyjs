@@ -19,16 +19,6 @@ export interface AnyOptionConfig {
   [propsname: string]: any;
 }
 
-export interface SocketConfig {
-  enable?: boolean;
-  path?: string;
-  serveClient?: boolean;
-  origins?: string;
-  wsEngine?: string;
-  transports?: string[];
-  [propsname: string]: any;
-}
-
 export interface ClusterConfig {
   enable?: boolean;
   reloadDelay?: number;
@@ -39,10 +29,6 @@ export interface ClusterConfig {
   refork?: boolean;
   args?: string[];
   [prop: string]: any;
-}
-
-export interface CurrentContextOptions {
-  enable?: boolean;
 }
 
 // config details
@@ -57,15 +43,12 @@ export interface Config {
   | RoutingControllersOptions
   | RoutingControllersOptions[]
   | ((opt?: any) => RoutingControllersOptions | RoutingControllersOptions[]);
-  // socket config
-  socket?: SocketConfig;
   // cluster config
   cluster?: ClusterConfig;
   // inject typedi
   typedi?: (Container: any) => any;
   // bodyParser
   bodyParser?: AnyOptionConfig;
-  currentContext?: CurrentContextOptions;
   // any key
   [propsname: string]: any;
 }
@@ -86,4 +69,27 @@ export enum AppLifeHook {
   'configDidReady' = 'configDidReady',
   'appDidReady' = 'appDidReady',
   'afterStart' = 'afterStart',
+}
+
+export interface PluginConfig {
+  name: string;
+  path?: string;
+  package?: string;
+  async?: boolean;
+  lifeHook?: 'beforeStart' | 'appDidReady' | 'afterStart';
+  priority?: number;
+}
+
+export interface LoaderOption {
+  koaApp: KoaApp;
+  config: Config;
+  apolloConfig?: ApolloConfig;
+  callback?: Function;
+  lifeHook?: string;
+}
+
+export interface PluginDirRes {
+  pluginDir: string;
+  pluginSrc: string;
+  pluginPkg: string;
 }

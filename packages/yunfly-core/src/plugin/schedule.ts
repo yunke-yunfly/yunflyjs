@@ -1,6 +1,5 @@
-import { PluginConfig } from '../loader/types';
 import Schedule from '../schedule/index';
-import { Config, KoaApp } from '../type';
+import { Config, KoaApp, PluginConfig } from '../type';
 import { getPathFromPlugin } from './utils';
 
 /**

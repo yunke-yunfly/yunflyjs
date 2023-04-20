@@ -26,8 +26,6 @@
     "build"
   ],
   "dependencies": {
-    "@types/cookie": "^0.4.1",
-    "@types/koa": "^2.13.4",
     "@types/lodash": "^4.14.171",
     "@yunflyjs/errors": "0.0.1-beta.14",
     "@yunflyjs/loggers": "0.0.1-beta.14",
@@ -35,16 +33,12 @@
     "@yunflyjs/yunfly-cluster": "0.0.1-beta.14",
     "chalk": "^4.1.0",
     "chokidar": "^3.5.1",
-    "commander": "^7.2.0",
-    "cross-spawn": "^7.0.3",
     "deepmerge": "^4.2.2",
     "find-process": "^1.4.5",
     "graceful-process": "^1.2.0",
     "lodash": "^4.17.21",
     "node-schedule": "^1.3.2",
-    "prom-client": "^14.0.0",
     "sendmessage": "^1.1.0",
-    "socket.io": "^2.3.0",
     "typedi": "^0.8.0"
   }
 }

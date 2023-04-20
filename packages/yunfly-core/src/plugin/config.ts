@@ -1,5 +1,4 @@
-import { PluginConfig } from '../loader/types';
-import { ApolloConfig, Config } from '../type';
+import { ApolloConfig, Config, PluginConfig } from '../type';
 import { RUNTIME_ENV, deepMerge } from '../util';
 import { getPathFromPlugin } from './utils';
 

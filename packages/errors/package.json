@@ -3,6 +3,7 @@
   "version": "0.0.1-beta.14",
   "main": "./dist/index.js",
   "typings": "dist/index.d.ts",
+  "description": "yunfly error.",
   "scripts": {
     "build": "gts clean && tsc",
     "dev": "tsc --watch"

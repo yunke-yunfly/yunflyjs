@@ -2,8 +2,7 @@ import { performance } from 'perf_hooks';
 import * as _ from 'lodash';
 import logger from '@yunflyjs/loggers';
 import { DEFAULT_PLUGIN_CONFIG } from '../const';
-import { LoaderOption, PluginConfig } from '../loader/types';
-import { Config, KoaApp } from '../type';
+import { Config, KoaApp, LoaderOption, PluginConfig } from '../type';
 import { deepMerge, getFramworkDirs } from '../util';
 import getPluginConfig from './config';
 import loadPluginControllers from './controllers';
@@ -22,14 +21,12 @@ export default class Plugin {
   koaApp: KoaApp;
   config: Config;
   plugins: PluginConfig[];
-  yunflyApp: Yunfly.YunflyAppConfig;
   callback: Function | undefined;
   lifeHook: string;
 
   constructor(option: LoaderOption) {
     this.koaApp = option.koaApp;
     this.config = option.config;
-    this.yunflyApp = option.yunflyApp;
     this.callback = option.callback;
     this.lifeHook = option.lifeHook || 'appDidReady';
     this.plugins = [];
@@ -156,7 +153,7 @@ export default class Plugin {
       // 初始化插件config
       this.getPluginConfig(item);
       // 加载插件
-      item['async'] ? await this.loadPlugin(item) : this.loadPlugin(item);
+      await this.loadPlugin(item);
       if (this.lifeHook === 'appDidReady') {
         // 初始化controllers
         this.loadPluginControllers(item);
@@ -238,7 +235,6 @@ export default class Plugin {
 
       // init plugin app.js
       return await fn({
-        app: this.yunflyApp,
         koaApp: this.koaApp,
         pluginConfig: this.config[plugin.name] || {},
         plugin,

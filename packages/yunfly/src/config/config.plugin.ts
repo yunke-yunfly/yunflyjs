@@ -4,22 +4,6 @@
  */
 import { PluginConfig } from '@yunflyjs/yunfly-core';
 
-const plugins: PluginConfig[] = [
-  {
-    name: 'error',
-    package: '@yunflyjs/yunfly-plugin-metadata',
-    priority: 2,
-  },
-  {
-    name: 'bodyParser',
-    package: '@yunflyjs/yunfly-plugin-body-parser',
-    priority: 3,
-  },
-  {
-    name: 'error',
-    package: '@yunflyjs/yunfly-plugin-error',
-    priority: 7,
-  },
-];
+const plugins: PluginConfig[] = [];
 
 export default plugins;

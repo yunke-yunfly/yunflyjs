@@ -1,6 +1,6 @@
 import * as path from 'path';
 import logger from '@yunflyjs/loggers';
-import { PluginConfig, PluginDirRes } from '../loader/types';
+import { PluginConfig, PluginDirRes } from '../type';
 
 /**
  * git plugin dir

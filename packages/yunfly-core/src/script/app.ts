@@ -7,32 +7,16 @@ import { Container } from 'typedi';
 import logger from '@yunflyjs/loggers';
 import getConfig from '../config';
 import { DEFAULT_KOA_MIDDLEWARE_CONFIG } from '../const';
-import currentContext from '../core/current-context';
 import { appDidReadyLifeHook } from '../core/life-hook';
 import { afterStartPluginHook } from '../core/plugin-hook';
-import YunflyApp from '../loader/app';
 import Plugin from '../plugin/index';
 import Schedule from '../schedule/index';
-import Socket from '../socket/index';
 // types
 import { AnyOptionConfig, Config, KoaApp } from '../type';
 // utils
 import { checkRoutingControllers, getDirPaths, processLog } from '../util';
 // cluster
 const cluster = require('cluster');
-
-// yunfly app
-let yunflyApp: Yunfly.YunflyAppConfig;
-
-/**
- * get yunfly app
- *
- * @export
- * @returns {YunflyAppInterface}
- */
-export function getYunflyApp(): Yunfly.YunflyAppConfig {
-  return yunflyApp;
-}
 
 if (cluster.isWorker) {
   processLog();
@@ -77,8 +61,6 @@ export default class InitApp {
    */
   async init(): Promise<void> {
     this.initApp();
-    this.currentContext();
-    this.initYunflyApp();
     this.initKoaMiddleware();
     this.appDidReady();
     const beginTime = performance.now();
@@ -107,31 +89,6 @@ export default class InitApp {
     this.app._config = this.app.config = this.config;
     // build-in config to ctx.
     this.app.context.config = this.config;
-  }
-
-  /**
-   * current trace
-   *
-   * @memberof InitApp
-   */
-  currentContext(): void {
-    const enable = this.config.currentContext?.enable ?? false;
-    if (!enable) {
-      return;
-    }
-    this.app.use(currentContext());
-  }
-
-  /**
-   * init yunfly app
-   *
-   * @memberof InitApp
-   */
-  initYunflyApp(): void {
-    yunflyApp = new YunflyApp({
-      koaApp: this.app as KoaApp,
-      config: this.config,
-    }) as Yunfly.YunflyAppConfig;
   }
 
   /**
@@ -175,7 +132,6 @@ export default class InitApp {
     await new Plugin({
       koaApp: this.app as KoaApp,
       config: this.config,
-      yunflyApp,
       lifeHook: 'appDidReady',
       callback: (middlewares: string[] = [], pluginRoutingControllersConfig?: any) => {
         if (middlewares && middlewares.length) {
@@ -271,11 +227,9 @@ export default class InitApp {
     server?.setMaxListeners(10);
     // init schedule
     new Schedule({ config: this.config, app: this.app }).ready();
-    // init socket service
-    new Socket({ config: this.config, server: server }).ready();
     // afterStart
     this.callback && this.callback(this.config, this.app, server);
     // init after plugins
-    afterStartPluginHook(this.app, this.config, yunflyApp);
+    afterStartPluginHook(this.app, this.config);
   }
 }

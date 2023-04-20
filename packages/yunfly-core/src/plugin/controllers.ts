@@ -1,6 +1,5 @@
 import * as path from 'path';
-import { PluginConfig } from '../loader/types';
-import { AnyOptionConfig, Config, KoaApp } from '../type';
+import { AnyOptionConfig, Config, KoaApp, PluginConfig } from '../type';
 import { getDirPaths } from '../util';
 import { getPathFromPlugin } from './utils';
 
