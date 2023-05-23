@@ -1,8 +1,8 @@
 import * as path from 'path';
 import logger from '@yunflyjs/loggers';
-
 import { AnyOptionConfig, Config } from './type';
 
+const _ = require('lodash');
 const fs = require('fs');
 const deepmerge = require('deepmerge');
 
@@ -40,7 +40,7 @@ export const deepMerge = (obj1: AnyOptionConfig, obj2: AnyOptionConfig): any => 
     const sourceArray_ = sourceArray.map((item) =>
       (typeof item === 'string' ? item.replace(/\\/g, '/') : item),
     );
-    return [...new Set([...destinationArray_, ...sourceArray_])];
+    return  _.uniqWith([...destinationArray_, ...sourceArray_], _.isEqual);
   };
   return deepmerge(obj1, obj2, { arrayMerge: overwriteMerge });
 };
