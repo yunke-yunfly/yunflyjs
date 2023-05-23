@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.0.1](https://github.com/yunke-yunfly/yunflyjs/compare/v0.0.1-beta.15...v0.0.1) (2023-05-23)
+
+**Note:** Version bump only for package @yunflyjs/yunfly-cluster
+
+
+
+
+
 ### [0.0.1-beta.15](https://github.com/yunke-yunfly/yunflyjs/compare/v0.0.1-beta.14...v0.0.1-beta.15) (2023-04-20)
 
 

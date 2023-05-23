@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.0.1](https://github.com/yunke-yunfly/yunflyjs/compare/v0.0.1-beta.15...v0.0.1) (2023-05-23)
+
+
+### Features
+
+* 剔除.env文件 ([e8d6a77](https://github.com/yunke-yunfly/yunflyjs/commit/e8d6a7735d3c875bca69d80bd71c6e935cd96247))
+
+
+
 ### [0.0.1-beta.15](https://github.com/yunke-yunfly/yunflyjs/compare/v0.0.1-beta.14...v0.0.1-beta.15) (2023-04-20)
 
 
