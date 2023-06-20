@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.0.2](https://github.com/yunke-yunfly/yunflyjs/compare/v0.0.1...v0.0.2) (2023-06-20)
+
+
+### Features
+
+* after 插件支持server参数 ([7ab1ebe](https://github.com/yunke-yunfly/yunflyjs/commit/7ab1ebe3d75462d5ba73555bcb0772bf15fed52f))
+
+
+### Bug Fixes
+
+* 修复合并config时数组重复问题 ([1a8f38b](https://github.com/yunke-yunfly/yunflyjs/commit/1a8f38baac7dcd4e190aef27abed5bd90494b616))
+
+
+
 ### [0.0.1](https://github.com/yunke-yunfly/yunflyjs/compare/v0.0.1-beta.15...v0.0.1) (2023-05-23)
 
 **Note:** Version bump only for package @yunflyjs/yunfly-core

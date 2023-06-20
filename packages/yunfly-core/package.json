@@ -1,6 +1,6 @@
 {
   "name": "@yunflyjs/yunfly-core",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "build/run.js",
   "typings": "build/run.d.ts",
   "keywords": [
@@ -27,10 +27,10 @@
   ],
   "dependencies": {
     "@types/lodash": "^4.14.171",
-    "@yunflyjs/errors": "0.0.1",
-    "@yunflyjs/loggers": "0.0.1",
+    "@yunflyjs/errors": "0.0.2",
+    "@yunflyjs/loggers": "0.0.2",
     "@yunflyjs/routing-controllers": "0.9.0",
-    "@yunflyjs/yunfly-cluster": "0.0.1",
+    "@yunflyjs/yunfly-cluster": "0.0.2",
     "chalk": "^4.1.0",
     "chokidar": "^3.5.1",
     "deepmerge": "^4.2.2",
