@@ -51,10 +51,12 @@ export async function appDidReadyPluginHook(
 export function afterStartPluginHook(
   app: KoaApp,
   config: Config,
+  server: any,
 ): Promise<any> {
   return new Plugin({
     koaApp: app as KoaApp,
     config: config,
+    server,
     lifeHook: 'afterStart',
   }).init();
 }

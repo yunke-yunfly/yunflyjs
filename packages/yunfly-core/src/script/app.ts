@@ -230,6 +230,6 @@ export default class InitApp {
     // afterStart
     this.callback && this.callback(this.config, this.app, server);
     // init after plugins
-    afterStartPluginHook(this.app, this.config);
+    afterStartPluginHook(this.app, this.config, server);
   }
 }

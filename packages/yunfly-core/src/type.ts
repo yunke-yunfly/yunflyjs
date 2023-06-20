@@ -86,6 +86,7 @@ export interface LoaderOption {
   apolloConfig?: ApolloConfig;
   callback?: Function;
   lifeHook?: string;
+  server?: any,
 }
 
 export interface PluginDirRes {

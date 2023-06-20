@@ -23,12 +23,14 @@ export default class Plugin {
   plugins: PluginConfig[];
   callback: Function | undefined;
   lifeHook: string;
+  server: any;
 
   constructor(option: LoaderOption) {
     this.koaApp = option.koaApp;
     this.config = option.config;
     this.callback = option.callback;
     this.lifeHook = option.lifeHook || 'appDidReady';
+    this.server = option?.server;
     this.plugins = [];
   }
 
@@ -240,6 +242,7 @@ export default class Plugin {
         plugin,
         config: this.config,
         apolloConfig,
+        server: this.server
       });
     } catch (err: any) {
       if (/Cannot find.+plugin.+app/.test(err.details || err.message)) {
