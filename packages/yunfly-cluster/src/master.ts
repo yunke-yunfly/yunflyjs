@@ -421,7 +421,7 @@ export default class Master extends EventEmitter {
 
     utils.logger({
       level: 'log', color: 'blue',
-      log: util.format('[%s], [app: %s], [worker_id：%s, worker_process_id: %s] address port: %s, remain worker number: %s',
+      log: util.format('[%s] [app: %s], [worker_id：%s, worker_process_id: %s] address port: %s, remain worker number: %s',
         utils.getTime(), process.pid, worker.id, data.workerPid, address.port, remain)
     })
 

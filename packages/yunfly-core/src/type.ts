@@ -94,3 +94,13 @@ export interface PluginDirRes {
   pluginSrc: string;
   pluginPkg: string;
 }
+
+
+export interface PluginOption {
+  koaApp: KoaApp;
+  pluginConfig: AnyOptionConfig;
+  plugin:PluginConfig;
+  config: Config;
+  apolloConfig:ApolloConfig;
+  server: any;
+}

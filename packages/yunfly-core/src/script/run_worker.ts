@@ -1,7 +1,6 @@
 // first step. Use yunke logger in header
 import logger from '@yunflyjs/loggers';
 import InitApp from './app';
-const gracefulProcess = require('graceful-process');
 
 // runing koa servers at every worker.
 try {
@@ -14,7 +13,3 @@ try {
   });
 }
 
-gracefulProcess({
-  logger: console,
-  label: 'yunfly_worker',
-});

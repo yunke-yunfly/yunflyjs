@@ -15,3 +15,5 @@ export default function startCluster(
   return new Master(options).ready(callback);
 }
 
+export { default as aloneClient } from './ipc/alone';
+export { default as workerClient } from './ipc/worker';

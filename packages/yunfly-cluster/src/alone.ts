@@ -1,5 +1,6 @@
 import * as types from "./types";
 import { getTime, logger } from "./utils/util";
+import path from 'path';
 
 const util = require('util');
 const EventEmitter = require('events');
@@ -33,7 +34,8 @@ export default class Alone extends EventEmitter {
       // stdio: ['ipc', 'pipe', 'pipe'],
       env: this.options.env || process.env
     }
-    const aloneWorker = childprocess.fork(this.options.alone, args, opt);
+    const aloneFile = path.join(__dirname,'./script/run_alone');
+    const aloneWorker = childprocess.fork(aloneFile, args, opt);
     aloneWorker.status = 'starting';
     aloneWorker.id = ++this.aloneWorkerIndex;
     this.app.aloneWorkerIndex = aloneWorker.id;

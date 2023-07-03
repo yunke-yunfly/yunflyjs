@@ -1,5 +1,6 @@
 import * as types from "./types";
 import { getTime, logger } from "./utils/util";
+import path from 'path';
 
 const cluster = require('cluster');
 const EventEmitter = require('events');
@@ -22,10 +23,10 @@ export default class Worker extends EventEmitter {
    */
   startWorker(app: any) {
     this.app = app
-
+    const workerFile = path.join(__dirname,'./script/run_worker');
     // fork worker
     cfork({
-      exec: this.options.exec,
+      exec: workerFile,
       slaves: this.options.slaves,
       count: this.options.count || require('os').cpus().length,
       args: this.options.args,
@@ -141,7 +142,7 @@ export default class Worker extends EventEmitter {
     logger({
       level: 'error',
       color: 'yellow',
-      log: util.format('[%s], [master:%s], [worker_process_id: %s] is unexpected exit. state: %s, current workers: %j',
+      log: util.format('[%s] [master:%s], [worker_process_id: %s] is unexpected exit. state: %s, current workers: %j',
         getTime(), process.pid, worker.process.pid, worker.state, Object.keys(cluster.workers))
     })
 

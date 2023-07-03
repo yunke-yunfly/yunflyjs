@@ -4,17 +4,6 @@ import { DEFAULT_ALONE_DIR } from '../const';
 import { getDirPaths } from '../util';
 
 const config = getConfig({ type: 2 });
-const sendmessage = require('sendmessage');
-const gracefulProcess = require('graceful-process');
-
-// send msg to app process.
-// this means alone process is ready.
-sendmessage(process, {
-  action: 'alone-worker-ready',
-  from: 'alone',
-  to: 'app',
-  data: true,
-});
 
 // read alone files
 // traverse all the alone files.
@@ -53,8 +42,4 @@ try {
   process.exit(1);
 }
 
-// graceful process
-gracefulProcess({
-  logger: console,
-  label: 'yunfly_alone_worker',
-});
+

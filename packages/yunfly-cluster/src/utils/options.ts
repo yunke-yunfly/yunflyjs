@@ -44,5 +44,8 @@ export default function getOptions(options: TypeMaster): AnyOptions {
         isWatch: options.isWatch,
     }
 
+    newOptions.env.YUNFLY_CLUSTER_WORKER_FILE = options.exec;
+    if (options.alone) { newOptions.env.YUNFLY_CLUSTER_ALONE_FILE = options.alone; }
+
     return newOptions
 }
