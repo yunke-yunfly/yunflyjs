@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.0.5](https://github.com/yunke-yunfly/yunflyjs/compare/v0.0.4...v0.0.5) (2023-07-04)
+
+
+### Bug Fixes
+
+* 修复cluster模型下进程间socket直连初始化两次问题 ([a06308f](https://github.com/yunke-yunfly/yunflyjs/commit/a06308f05bd4d347ae61ae60d06f63c24803eca8))
+
+
+
 ### [0.0.4](https://github.com/yunke-yunfly/yunflyjs/compare/v0.0.3...v0.0.4) (2023-07-04)
 
 

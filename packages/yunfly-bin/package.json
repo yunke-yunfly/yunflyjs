@@ -1,6 +1,6 @@
 {
   "name": "@yunflyjs/yunfly-bin",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "build/index.js",
   "typings": "build/index.d.ts",
   "keywords": [
@@ -34,7 +34,7 @@
     "cross-spawn": "^7.0.3"
   },
   "devDependencies": {
-    "@yunflyjs/loggers": "0.0.4",
-    "@yunflyjs/yunfly-core": "0.0.4"
+    "@yunflyjs/loggers": "0.0.5",
+    "@yunflyjs/yunfly-core": "0.0.5"
   }
 }
