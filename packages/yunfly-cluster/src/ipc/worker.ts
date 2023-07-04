@@ -11,6 +11,7 @@ export default function getWorkerClient() {
   client = new YunflyClient();
   client.ready((err: any) => {
     if (err) {
+      workerClient = null;
       utils.logger({
         level: 'error', color: 'red',
         log: util.format(
@@ -22,7 +23,6 @@ export default function getWorkerClient() {
         )
       })
     } else {
-      workerClient = client;
       utils.logger({
         level: 'log', color: 'magenta',
         log: util.format(
@@ -34,6 +34,7 @@ export default function getWorkerClient() {
       })
     }
   });
+  workerClient = client;
   return client;
 }
 

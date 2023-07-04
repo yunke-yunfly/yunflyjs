@@ -4,7 +4,7 @@ const util = require('util');
 const YunflyClient = require('./client');
 
 let aloneClient: any;
-export default function getAlongClient() {
+export default function getAloneClient() {
   if(aloneClient) {
     return aloneClient;
   }
@@ -12,6 +12,7 @@ export default function getAlongClient() {
   client = new YunflyClient();
   client.ready((err: any) => {
     if (err) {
+      aloneClient = null;
       utils.logger({
         level: 'error', color: 'red',
         log: util.format(
@@ -23,7 +24,6 @@ export default function getAlongClient() {
         )
       })
     } else {
-      aloneClient = client;
       utils.logger({
         level: 'log', color: 'magenta',
         log: util.format(
@@ -35,6 +35,7 @@ export default function getAlongClient() {
       })
     }
   });
+  aloneClient = client;
   return client;
 }
 

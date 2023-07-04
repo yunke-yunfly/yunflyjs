@@ -9,4 +9,4 @@ export {
   MethodNotAllowedError, NotFoundError, UnauthorizedError,
 } from '@yunflyjs/errors';
 export { default as default } from './script/index';
-export { getAlongClient, getWorkerClient } from '@yunflyjs/yunfly-cluster';
+export { getAloneClient, getWorkerClient } from '@yunflyjs/yunfly-cluster';
