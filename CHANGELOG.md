@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.0.4](https://github.com/yunke-yunfly/yunflyjs/compare/v0.0.3...v0.0.4) (2023-07-04)
+
+
+### Features
+
+* 优化cluster模型socket直连导出函数 ([4e385fd](https://github.com/yunke-yunfly/yunflyjs/commit/4e385fd4a03b6b607a9cf2ab9b51dbcfca99f3af))
+
+
+
 ### [0.0.3](https://github.com/yunke-yunfly/yunflyjs/compare/v0.0.2...v0.0.3) (2023-07-03)
 
 

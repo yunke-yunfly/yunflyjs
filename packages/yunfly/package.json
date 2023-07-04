@@ -1,6 +1,6 @@
 {
   "name": "@yunflyjs/yunfly",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "build/index.js",
   "typings": "build/index.d.ts",
   "repository": "https://github.com/yunke-yunfly/yunflyjs.git",
@@ -32,7 +32,7 @@
     "build"
   ],
   "dependencies": {
-    "@yunflyjs/yunfly-bin": "0.0.3",
-    "@yunflyjs/yunfly-core": "0.0.3"
+    "@yunflyjs/yunfly-bin": "0.0.4",
+    "@yunflyjs/yunfly-core": "0.0.4"
   }
 }
