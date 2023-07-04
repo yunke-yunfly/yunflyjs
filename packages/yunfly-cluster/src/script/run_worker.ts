@@ -5,7 +5,7 @@ const workerFile = process.env.YUNFLY_CLUSTER_WORKER_FILE;
 if (workerFile) {
 
   // init worker ipc
-  require('../ipc/worker');
+  require('../ipc/worker').default();
 
   // init worker process
   require(workerFile);

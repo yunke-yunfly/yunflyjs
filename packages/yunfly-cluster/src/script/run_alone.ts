@@ -14,7 +14,7 @@ if (aloneFile) {
   });
 
   // init alone ipc
-  require('../ipc/alone');
+  require('../ipc/alone').default();
 
   // init alone process
   require(aloneFile);

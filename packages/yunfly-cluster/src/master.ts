@@ -173,6 +173,7 @@ export default class Master extends EventEmitter {
       const worker = cluster.workers[id];
       worker.isDevReload = true;
     }
+    process.env.YUNFLY_CLUSTER_WORKER_FILE = this.options.exec;
     require('cluster-reload')(this.options.count);
   }
 
@@ -191,6 +192,7 @@ export default class Master extends EventEmitter {
 
     const KILL_SIGNAL = 'SIGTERM';
     const agentWorker = this.workerManager.getAlone();
+    process.env.YUNFLY_CLUSTER_ALONE_FILE = this.options.alone;
     agentWorker.kill(KILL_SIGNAL);
   }
 

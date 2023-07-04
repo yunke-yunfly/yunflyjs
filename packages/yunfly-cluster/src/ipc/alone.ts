@@ -2,10 +2,13 @@
 import * as utils from "../utils/util";
 const util = require('util');
 const YunflyClient = require('./client');
-const aloneFile = process.env.YUNFLY_CLUSTER_ALONE_FILE;
 
-let client: any;
-if (aloneFile) {
+let aloneClient: any;
+export default function getAlongClient() {
+  if(aloneClient) {
+    return aloneClient;
+  }
+  let client: any;
   client = new YunflyClient();
   client.ready((err: any) => {
     if (err) {
@@ -20,6 +23,7 @@ if (aloneFile) {
         )
       })
     } else {
+      aloneClient = client;
       utils.logger({
         level: 'log', color: 'magenta',
         log: util.format(
@@ -31,6 +35,8 @@ if (aloneFile) {
       })
     }
   });
+  return client;
 }
 
-export default client;
+
+

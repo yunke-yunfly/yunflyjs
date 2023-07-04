@@ -1,10 +1,13 @@
 import * as utils from "../utils/util";
 const util = require('util');
 const YunflyClient = require('./client')
-const workerFile = process.env.YUNFLY_CLUSTER_WORKER_FILE;
 
-let client: any;
-if(workerFile) {
+let workerClient: any;
+export default function getWorkerClient() {
+  if (workerClient) {
+    return workerClient;
+  }
+  let client: any;
   client = new YunflyClient();
   client.ready((err: any) => {
     if (err) {
@@ -19,6 +22,7 @@ if(workerFile) {
         )
       })
     } else {
+      workerClient = client;
       utils.logger({
         level: 'log', color: 'magenta',
         log: util.format(
@@ -30,6 +34,7 @@ if(workerFile) {
       })
     }
   });
+  return client;
 }
 
-export default client;
+
