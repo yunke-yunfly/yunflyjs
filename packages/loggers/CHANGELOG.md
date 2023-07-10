@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.0.6](https://github.com/yunke-yunfly/yunflyjs/compare/v0.0.5...v0.0.6) (2023-07-10)
+
+
+### Features
+
+* 锁定所有依赖版本 ([264ba4d](https://github.com/yunke-yunfly/yunflyjs/commit/264ba4d32980cd999a5666e46045ce6b5821de44))
+
+
+
 ### [0.0.5](https://github.com/yunke-yunfly/yunflyjs/compare/v0.0.4...v0.0.5) (2023-07-04)
 
 **Note:** Version bump only for package @yunflyjs/loggers
