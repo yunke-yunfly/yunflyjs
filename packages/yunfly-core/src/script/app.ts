@@ -222,7 +222,7 @@ export default class InitApp {
    */
   runApp(): void {
     // start koa app
-    const server = this.app.listen(process.env.TEST_PORT_MODE ? 0 : this.port);
+    const server = this.app.listen(process.env.YUNFLY_UNIT_TEST ? 0 : this.port);
     // 不限制监听连接数
     server?.setMaxListeners(10);
     // init schedule

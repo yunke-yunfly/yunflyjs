@@ -68,7 +68,7 @@ export default class FlyApp {
     const _this = this;
     this.port = config.port;
     await stop(this.port as number);
-    if (this.config.cluster && this.config.cluster?.enable && !this.options.jest) {
+    if (this.config.cluster && this.config.cluster?.enable && !process.env.YUNFLY_UNIT_TEST) {
       const startCluster = require('@yunflyjs/yunfly-cluster').default;
       // start app in cluster mode
       this.config.cluster.port = config.port;
