@@ -9,6 +9,7 @@ import loadPluginControllers from './controllers';
 import loadPluginSchedule from './schedule';
 import { getPathFromPlugin, mergePlugins } from './utils';
 
+const fs = require('fs');
 const plugined: string[] = [];
 
 /**
@@ -42,12 +43,17 @@ export default class Plugin {
   async init() {
     this.gitPluginConfig();
     this.getLifeHookPluginConfig();
-    if (!this.plugins.length) {
-      return;
-    }
+    if (!this.plugins.length) { return; }
     this.sortPlugin();
     this.checkPlugin();
     await this.initPlugin();
+  }
+
+  async master() {
+    this.gitPluginConfig();
+    if (!this.plugins.length) { return; }
+    this.sortPlugin();
+    await this.initPluginMasterFile();
   }
 
   /**
@@ -142,9 +148,6 @@ export default class Plugin {
    * @memberof Plugin
    */
   async initPlugin() {
-    if (!this.plugins.length) {
-      return;
-    }
     let index: number = 0;
     while (index < this.plugins.length) {
       const beginTime = performance.now();
@@ -155,7 +158,7 @@ export default class Plugin {
       // 初始化插件config
       this.getPluginConfig(item);
       // 加载插件
-      await this.loadPlugin(item);
+      await this.loadPlugin(item, 'app');
       if (this.lifeHook === 'appDidReady') {
         // 初始化controllers
         this.loadPluginControllers(item);
@@ -214,13 +217,18 @@ export default class Plugin {
    * @returns
    * @memberof Plugin
    */
-  async loadPlugin(plugin: PluginConfig) {
+  async loadPlugin(plugin: PluginConfig, filename: string) {
     const { pluginSrc } = getPathFromPlugin(plugin);
-    const appfile = `${pluginSrc}/app`;
+    const runfile = `${pluginSrc}/${filename}.js`;
+    const isExist = fs.existsSync(runfile);
+    if (!isExist) {
+      if (filename === 'app') logger.window().info(`${runfile} 插件缺少了${filename}.ts文件(可忽略文件)`);
+      return;
+    }
     try {
-      const fn = require(appfile).default;
+      const fn = require(runfile).default;
       if (typeof fn !== 'function') {
-        logger.color('#ff0000').window().error(`${appfile}插件必须导出为函数!`);
+        logger.color('#ff0000').window().error(`${runfile}插件必须导出为函数!`);
         return;
       }
 
@@ -245,11 +253,16 @@ export default class Plugin {
         server: this.server
       });
     } catch (err: any) {
-      if (/Cannot find.+plugin.+app/.test(err.details || err.message)) {
-        logger.window().info(`${appfile} 插件缺少了app.ts文件(可忽略文件)`);
-      } else {
-        throw err;
-      }
+      throw err;
+    }
+  }
+
+  async initPluginMasterFile() {
+    let index: number = 0;
+    while (index < this.plugins.length) {
+      const plugin: any = this.plugins[index] || {};
+      await this.loadPlugin(plugin, 'master');
+      index++;
     }
   }
 }

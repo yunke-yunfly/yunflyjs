@@ -60,3 +60,15 @@ export function afterStartPluginHook(
     lifeHook: 'afterStart',
   }).init();
 }
+
+export function masterPluginHook(
+  app: KoaApp,
+  config: Config,
+  server: any,
+): Promise<any> {
+  return new Plugin({
+    koaApp: app as KoaApp,
+    config: config,
+    server,
+  }).master();
+}

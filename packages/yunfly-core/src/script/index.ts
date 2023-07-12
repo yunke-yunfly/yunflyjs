@@ -9,6 +9,7 @@ import Watch from '../development/watch';
 import { stop } from '../stop';
 import { AnyOptionConfig, Config, YunFlyOptions } from '../type';
 import { getClusterEnvs, getCpusLength, getYunflyPackageJson, isProduction } from '../util';
+import { masterPluginHook } from '../core/plugin-hook';
 
 /**
  *
@@ -120,6 +121,9 @@ export default class FlyApp {
 
     // life hook
     afterStartLifeHook(config, app, server);
+    // master plugin hook
+    masterPluginHook(app, config, server);
+    // callback
     this.callback && this.callback(config, app, server);
   }
 
