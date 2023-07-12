@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.0.7](https://github.com/yunke-yunfly/yunflyjs/compare/v0.0.6...v0.0.7) (2023-07-12)
+
+
+### Features
+
+* plugin support loading master file ([993ec35](https://github.com/yunke-yunfly/yunflyjs/commit/993ec35322dd291c7aa9f3874547c5f08ed3b330))
+
+
+
 ### [0.0.6](https://github.com/yunke-yunfly/yunflyjs/compare/v0.0.5...v0.0.6) (2023-07-10)
 
 
