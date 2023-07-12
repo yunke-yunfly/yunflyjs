@@ -7,6 +7,7 @@
   "author": "zane <752636052@qq.com>",
   "homepage": "https://yunke-yunfly.github.io/doc.github.io/document/introduction/introduce",
   "keywords": [
+    "yunfly",
     "koa2",
     "routing-controllers",
     "find-my-way",
@@ -33,6 +34,8 @@
   ],
   "dependencies": {
     "@yunflyjs/yunfly-bin": "0.0.7",
-    "@yunflyjs/yunfly-core": "0.0.7"
+    "@yunflyjs/yunfly-core": "0.0.7",
+    "@yunflyjs/yunfly-plugin-body-parser": "0.0.7",
+    "@yunflyjs/yunfly-plugin-error": "0.0.7"
   }
 }

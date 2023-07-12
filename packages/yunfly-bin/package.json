@@ -3,6 +3,7 @@
   "version": "0.0.7",
   "main": "build/index.js",
   "typings": "build/index.d.ts",
+  "author": "zane <752636052@qq.com>",
   "keywords": [
     "yunfly",
     "yunfly bin"

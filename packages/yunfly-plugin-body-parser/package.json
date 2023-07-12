@@ -1,0 +1,32 @@
+{
+  "name": "@yunflyjs/yunfly-plugin-body-parser",
+  "version": "0.0.7",
+  "main": "./dist/app.js",
+  "typings": "dist/app.d.ts",
+  "description": "yunfly body parse plugin",
+  "keywords": [
+    "yunfly plugin",
+    "body-parser"
+  ],
+  "scripts": {
+    "build": "gts clean && tsc",
+    "dev": "tsc --watch"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "engines": {
+    "node": ">=10.13.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "koa-bodyparser": "4.3.0"
+  },
+  "devDependencies": {
+    "@yunflyjs/yunfly-core": "0.0.7"
+  }
+}

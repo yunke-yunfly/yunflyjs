@@ -1,0 +1,34 @@
+{
+  "name": "@yunflyjs/yunfly-plugin-error",
+  "version": "0.0.7",
+  "main": "./dist/app.js",
+  "typings": "dist/app.d.ts",
+  "description": "yunfly error plugin.",
+  "keywords": [
+    "yunfly plugin",
+    "error"
+  ],
+  "scripts": {
+    "build": "gts clean && tsc",
+    "dev": "tsc --watch"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "engines": {
+    "node": ">=10.13.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@yunflyjs/yunfly-core": "0.0.7",
+    "@yunflyjs/routing-controllers": "^0.9.0",
+    "@yunflyjs/loggers":"0.0.7",
+    "@yunflyjs/errors": "0.0.7"
+  }
+}
