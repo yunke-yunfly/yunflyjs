@@ -1,6 +1,6 @@
 {
   "name": "@yunflyjs/yunfly-bin",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "main": "build/index.js",
   "typings": "build/index.d.ts",
   "author": "zane <752636052@qq.com>",
@@ -35,7 +35,7 @@
     "cross-spawn": "7.0.3"
   },
   "devDependencies": {
-    "@yunflyjs/loggers": "0.0.7",
-    "@yunflyjs/yunfly-core": "0.0.7"
+    "@yunflyjs/loggers": "0.0.8",
+    "@yunflyjs/yunfly-core": "0.0.8"
   }
 }
