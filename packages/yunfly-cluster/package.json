@@ -1,6 +1,6 @@
 {
   "name": "@yunflyjs/yunfly-cluster",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "main": "build/index.js",
   "typings": "build/index.d.ts",
   "license": "MIT",
@@ -29,6 +29,6 @@
     "tree-kill": "1.2.2"
   },
   "devDependencies": {
-    "@yunflyjs/loggers": "0.0.8"
+    "@yunflyjs/loggers": "0.0.9"
   }
 }

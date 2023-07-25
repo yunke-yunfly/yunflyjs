@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.0.9](https://github.com/yunke-yunfly/yunflyjs/compare/v0.0.8...v0.0.9) (2023-07-25)
+
+
+### Bug Fixes
+
+* 修复对config.logFilter的支持(过滤日志能力) ([162a6f2](https://github.com/yunke-yunfly/yunflyjs/commit/162a6f228bc50e37d8f17cce1b374e101b5c6953))
+
+
+
 ### [0.0.8](https://github.com/yunke-yunfly/yunflyjs/compare/v0.0.7...v0.0.8) (2023-07-12)
 
 **Note:** Version bump only for package @yunflyjs/loggers
