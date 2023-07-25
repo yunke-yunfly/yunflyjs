@@ -1,4 +1,4 @@
-import { getDefaultLogger, isProd, packagejson } from './util';
+import { getDefaultLogger, isProd, packagejson, setLogFilter_ } from './util';
 import { ArgsHandleType, OptionConfig, TLogFilter, TLogType } from './types';
 const util = require('util');
 const randomColor = require('randomcolor');
@@ -25,7 +25,10 @@ let argumentsHandle: ArgsHandleType;
 let enablelogger: boolean = true;
 
 export function setLogFilter(opt: TLogFilter): void {
-  if (opt) { logFilter = opt; }
+  if (opt) {
+    logFilter = opt;
+    setLogFilter_(opt);
+  }
 }
 
 export function setArgsHandle(opt: ArgsHandleType) {
@@ -100,11 +103,6 @@ class Logger {
     return this;
   }
   logger(key: TLogType, args: any[]) {
-    const newLogFilter = this.logFilter__ || this.logFilter_ || logFilter;
-    if (newLogFilter) {
-      args = newLogFilter(key, ...args);
-    }
-
     const prefix = this.prefix__ || this.prefix_;
     const onlySign = this.onlySign__ || this.onlySign_;
     if (prefix && !onlySign) {
@@ -129,8 +127,11 @@ class Logger {
     // console
     if (isProd) {
       if (this.window__ || this.window_) {
+        const newLogFilter = this.logFilter__ || this.logFilter_ || logFilter;
         // eslint-disable-next-line promise/catch-or-return
-        Promise.resolve(process.stderr.write(`${util.format(...args)}\n`));
+        Promise.resolve(process.stderr.write(
+          newLogFilter ? newLogFilter(key, `${util.format(...args)}\n`)[0] : `${util.format(...args)}\n`,
+        ));
       }
     }
     else {

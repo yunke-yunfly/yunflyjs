@@ -7,10 +7,12 @@ const safeStringify = require('fast-safe-stringify');
 const winston = require('winston');
 require('winston-daily-rotate-file');
 
-
+let logFilter: any;
 export const isProd = process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'prod';
 
 export const packagejson = (): AnyOpton => require(path.join(process.cwd(), './package.json'));
+
+export const setLogFilter_ = (opt: Function) => { logFilter = opt; };
 
 /**
  * get error stack msg
@@ -59,6 +61,11 @@ const yunflyFormat = winston.format.printf(({ level, message, timestamp }: any) 
     : (typeof messages[0] === 'object'
       ? safeStringify(messages[0], null, '  ')
       : messages[0]);
+
+  if (logFilter) {
+    const result = logFilter(level, safeStringify(output));
+    return Array.isArray(result) ? result[0] : result;
+  }
 
   return safeStringify(output);
 });

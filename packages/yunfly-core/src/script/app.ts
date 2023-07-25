@@ -115,7 +115,7 @@ export default class InitApp {
       }
     } catch (err: any) {
       if (/Cannot find.+config\.middleware/.test(err.details || err.message)) {
-        logger.window().info('【yunfly middleware】: 没有配置config.middleware.ts配置文件(可忽略配置文件)。');
+        // logger.window().info('【yunfly middleware】: 没有配置config.middleware.ts配置文件(可忽略配置文件)。');
       } else {
         throw err;
       }
