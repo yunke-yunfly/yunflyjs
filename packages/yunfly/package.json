@@ -1,6 +1,6 @@
 {
   "name": "@yunflyjs/yunfly",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "main": "build/index.js",
   "typings": "build/index.d.ts",
   "repository": "https://github.com/yunke-yunfly/yunflyjs.git",
@@ -33,9 +33,9 @@
     "build"
   ],
   "dependencies": {
-    "@yunflyjs/yunfly-bin": "0.0.9",
-    "@yunflyjs/yunfly-core": "0.0.9",
-    "@yunflyjs/yunfly-plugin-body-parser": "0.0.9",
-    "@yunflyjs/yunfly-plugin-error": "0.0.9"
+    "@yunflyjs/yunfly-bin": "0.0.10",
+    "@yunflyjs/yunfly-core": "0.0.10",
+    "@yunflyjs/yunfly-plugin-body-parser": "0.0.10",
+    "@yunflyjs/yunfly-plugin-error": "0.0.10"
   }
 }

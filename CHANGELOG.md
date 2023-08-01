@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.0.10](https://github.com/yunke-yunfly/yunflyjs/compare/v0.0.9...v0.0.10) (2023-08-01)
+
+
+### Features
+
+* 当有controllers类型插件中间件时 优先注册插件中的controller ([7017f7c](https://github.com/yunke-yunfly/yunflyjs/commit/7017f7c591339433c884f1b36c7c3e7961db04c3))
+
+
+
 ### [0.0.9](https://github.com/yunke-yunfly/yunflyjs/compare/v0.0.8...v0.0.9) (2023-07-25)
 
 

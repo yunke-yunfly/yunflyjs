@@ -1,6 +1,6 @@
 {
   "name": "@yunflyjs/yunfly-plugin-error",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "main": "./dist/app.js",
   "typings": "dist/app.d.ts",
   "description": "yunfly error plugin.",
@@ -24,9 +24,9 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@yunflyjs/errors": "0.0.9",
-    "@yunflyjs/loggers": "0.0.9",
+    "@yunflyjs/errors": "0.0.10",
+    "@yunflyjs/loggers": "0.0.10",
     "@yunflyjs/routing-controllers": "^0.9.0",
-    "@yunflyjs/yunfly-core": "0.0.9"
+    "@yunflyjs/yunfly-core": "0.0.10"
   }
 }
