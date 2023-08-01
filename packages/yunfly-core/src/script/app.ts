@@ -197,7 +197,8 @@ export default class InitApp {
 
     // 合并插件 routing-controllers 配置
     rcConfigs = [...rcConfigs, ...this.allpluginRoutingControllersConfig];
-
+    // 优先注册插件中的controller
+    rcConfigs.reverse();
     rcConfigs.forEach((rcConfig: AnyOptionConfig, index: number) => {
       const storage = getMetadataArgsStorage();
       storage.reset();
